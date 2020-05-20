@@ -1,0 +1,10 @@
+
+.big-banner
+{
+background-image:url('/static/images/bcm2.jpg');
+background-repeat:no-repeat;
+background-size:100%;
+}
+body{
+    background-color: white;
+}

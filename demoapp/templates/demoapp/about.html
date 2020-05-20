@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% block body %}
+    <section class="probootstrap-slider flexslider2 page-inner">
+        <div class="overlay"></div>
+        <div class="probootstrap-wrap-banner">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+    
+                <div class="page-title probootstrap-animate">
+                  <div class="probootstrap-breadcrumbs">
+                    <a href="{% url 'demoapp:home'%}">Home</a><span>About</span>
+                  </div>
+                  </section>
+    <div class="container">
+        <div class="row-5">
+            <h2> Mahi tours contact Details </h2>
+            <p>Hello folks! it looks like you know us better. Online Tourism gide is auser friendly , easy to use website where tourist can find the complete guidence. visitor can search the place by selecting city and kind of place. no login and registration is required for visitor</p>
+        </div>
+        <br>
+        
+            <div class="row">
+                <div class="col-md-12">
+                        <h3> guide name  :   mahesh</h3>
+                        <h4> ph numbers  : 8978058734 & 9676666750</h4>
+                        <h5> email : mahiramavajjala@gmail.com </h5>
+                </div>
+                    
+            </div>
+            
+    </div>
+    {% endblock %}
+   
+</body>
+</html>

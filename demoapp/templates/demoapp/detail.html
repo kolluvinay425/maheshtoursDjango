@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% block body %}
+    <section class="probootstrap-slider flexslider2 page-inner">
+        <div class="overlay"></div>
+        <div class="probootstrap-wrap-banner">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+    <div class="page-title probootstrap-animate">
+        <div class="probootstrap-breadcrumbs">
+          <a href="{% url 'demoapp:tour_package'%}">Tours</a><span>About</span>
+        </div>
+      </div>
+    <div class="row">
+        <div class="col-md-2">
+            <img class="card" height="250px" src="{{tour.image.url}}"/>
+        </div>
+        <div class="col-md-12">
+            <h1>{{tour.name}}</h1>
+            <h5>{{tour.description}}</h2>
+            <h3> {{tour.price}}</h3>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

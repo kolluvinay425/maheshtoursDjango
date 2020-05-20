@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% block body %}
+</br>
+        <div class="container">
+        
+                <h1>Tour packages</h2>
+                {% for tour in tours %}
+                <div class="row">
+                    <div class="col-md-3 offset-md-2">
+                    <img class="card" height="180px" width="280px" src="{{tour.image.url}}"/>
+                    </div>
+                    <div class="col-md-4">
+                     <h5>{{tour.name}}</h3>
+                    
+                     <h6>price: {{tour.price}}</h6>
+                
+                    </div>
+                    <div class="col-md-3">
+                    <a href="{% url 'demoapp:detail' tour.id %}" class="btn btn-success">Details</a>
+                    </div>
+
+                </div>
+                
+    
+                
+                {% endfor %}
+                {% endblock %}
+</body>
+</html>
