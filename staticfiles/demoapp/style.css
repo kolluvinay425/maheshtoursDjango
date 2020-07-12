@@ -1,0 +1,18 @@
+
+.big-banner
+{
+background-image:url('/static/images/bcm2.jpg');
+background-repeat:no-repeat;
+background-size:100%;
+}
+body{
+    background-color: white;
+}
+
+table {
+border: 1px red;
+border-collapse: collapse;
+}
+th, td {
+padding: 15px;
+}
