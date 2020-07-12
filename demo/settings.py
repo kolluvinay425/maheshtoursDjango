@@ -28,7 +28,7 @@ SECRET_KEY = '*5(sla1c9_4-o*u=+-xgl4y3ggtzbz$mx4c3f1z7@2wgz_qy4+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0' ,'localhost' 'maheshtours.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0' ,'localhost' ,'maheshtours.herokuapp.com']
 
 
 # Application definition
@@ -133,11 +133,13 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'kolluvinay425@gmail.com'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSOWRD = ''
-EMAIL_USE_TLS = False
-EMAIL_PORT = 1025
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sivaleelakollu27@gmail.com'
+EMAIL_HOST_PASSOWRD = 'oyodmlhabvwfqdbn'
+DEFAULT_FROM_EMAIL = 'sivaleelakollu27@gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
 
 
 django_heroku.settings(locals())
