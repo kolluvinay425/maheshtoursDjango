@@ -20,6 +20,7 @@ class Category(models.Model):
     image = models.ImageField(upload_to='demoapp/' , null=True)
     def __str__(self):
         return self.category_name
+        
 
    
     
