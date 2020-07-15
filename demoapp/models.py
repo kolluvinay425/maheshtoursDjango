@@ -9,7 +9,7 @@ class Tour(models.Model):
         return self.name
 
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='media',default="Image-Coming-Soon.jpg")
+    image = models.CharField(max_length=300)
     description = models.CharField(max_length=400)
     price = models.IntegerField()
     category = models.ForeignKey('Category' ,null=True ,on_delete=models.SET_NULL)
