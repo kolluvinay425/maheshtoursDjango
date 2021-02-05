@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from . models import Contact
 from demo.settings import EMAIL_HOST_USER
 from . forms import ContactForm 
-from django.core.mail import send_mail ,BadHeaderError
+from django.core.mail import send_mail as rohit ,BadHeaderError
 from django.http import HttpResponse,HttpResponseRedirect
 
 # Create your views here.
@@ -19,7 +19,7 @@ def sendmail(request):
             
 
         #try : 
-        send_mail(subject,
+        rohit(subject,
         message ,email,[EMAIL_HOST_USER],fail_silently=False )
             
 

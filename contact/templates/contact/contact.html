@@ -20,7 +20,8 @@
 
             <div class="page-title probootstrap-animate">
               <div class="probootstrap-breadcrumbs">
-                <a href="">Home</a><span>About</span>
+                <a href="{% url 'demoapp:home' %}">Home</a>
+                <span>About</span>
               </div>
               <h1>Contact</h1>
               <br>
@@ -42,7 +43,10 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <h4>Register for a free account</h4>
+          <h4>Get in touch with us</h4>
+          
+          <br>
+
         </div>
         <form action="" method="POST">
           {% csrf_token %}
@@ -83,7 +87,7 @@
             />
             <small class="float-right py-3 showPasswordToggle">SHOW</small>
           </div>
-          <input type="submit" value="Send Message" class="btn btn-block btn-primary submit-btn" />
+          <input type="submit" value="Send Message" class="btn btn-block btn-primary submit-btn" /> <br>
         
         <div class="col-md-3 col-md-push-1">
           <h4>Contact Details</h4>
@@ -93,7 +97,7 @@
             <li><i class="icon-phone2"></i><span>{{contact_detail.phone_number}}</span></li>
           </ul>
 
-          <h4>Feedback</h4>
+          
           <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
           <p><a href="#">Learn More</a></p>
         </div>
