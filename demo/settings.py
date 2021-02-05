@@ -136,14 +136,15 @@ STATICFILES_STORAGE = 'whitenoise.storage.GzipManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,"staticfiles","media-root")
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'sivaleelakollu27@gmail.com'
-EMAIL_HOST_PASSOWRD = 'vinay#rome1'
-DEFAULT_FROM_EMAIL = 'sivaleelakollu27@gmail.com'
+EMAIL_HOST_USER = 'vinayrome@gmail.com'
+EMAIL_HOST_PASSWORD = 'vinay@rome11'
+DEFAULT_FROM_EMAIL = 'vinayrome@gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
+
+
 
 
 django_heroku.settings(locals())

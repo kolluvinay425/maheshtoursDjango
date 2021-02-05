@@ -20,7 +20,7 @@
 
             <div class="page-title probootstrap-animate">
               <div class="probootstrap-breadcrumbs">
-                <a href="{% url 'demoapp:home'%}">Home</a><span>About</span>
+                <a href="">Home</a><span>About</span>
               </div>
               <h1>Contact</h1>
               <br>
@@ -42,14 +42,49 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
-          <form method="post" class="probootstrap-form mb60">
-            {% csrf_token %}
-            {{contact_form}}
-            <div class="form-group">
-              <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Send Message">
-            </div>
-          </form>
+          <h4>Register for a free account</h4>
         </div>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+            <input
+              type="text"
+              name="subject"
+              placeholder="subject"
+              id="subjectField"
+              
+              class="form-control form-control-sm"
+            />
+          </div>
+          <div class="invalid_feedback invalid-feedback" style="display:none">
+          </div>
+          <p class="text-sm text-success usernameSuccessOutput"></p>
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              class="form-control form-control-sm"
+              id="emailField"
+
+              value="{{fieldValues.email}}"
+            />
+          </div>
+
+          <div class="emailFeedBackArea invalid-feedback" style="display:none">
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              name="message"
+              placeholder="Message"
+              class="form-control form-control-sm"
+              id="messageField"
+            />
+            <small class="float-right py-3 showPasswordToggle">SHOW</small>
+          </div>
+          <input type="submit" value="Send Message" class="btn btn-block btn-primary submit-btn" />
+        
         <div class="col-md-3 col-md-push-1">
           <h4>Contact Details</h4>
           <ul class="with-icon colored">
